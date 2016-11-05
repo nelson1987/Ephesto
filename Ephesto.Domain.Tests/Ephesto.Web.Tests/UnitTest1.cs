@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Web.Mvc;
 using Ephesto.Domain.Interfaces.Repositories;
 using Ephesto.Web.Controllers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -10,6 +11,7 @@ namespace Ephesto.Web.Tests
     public class HomeControllerTests
     {
         [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
         public void ValidarPaginaHome()
         {
             // Arrange
