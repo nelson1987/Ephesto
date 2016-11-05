@@ -27,7 +27,7 @@ namespace Ephesto.Domain.Tests.Services
 
             //Assert
             var esperado = _target.IncluirUsuario(cliente);
-            var atual = new Usuario(1, "General Motors", "general_motors",new List<Perfil>());
+            var atual = new Usuario(1, "General Motors", "general_motors", new List<Perfil>());
             Assert.AreEqual(esperado.Login, atual.Login);
         }
     }

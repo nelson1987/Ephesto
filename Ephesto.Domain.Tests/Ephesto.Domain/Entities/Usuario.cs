@@ -18,8 +18,9 @@ namespace Ephesto.Domain.Entities
             : this(0, nome, login, new List<Perfil>())
         {
         }
+
         public Usuario(string nome, string login, string perfil)
-            : this(0, nome, login, new List<Perfil>(){new Perfil(perfil)})
+            : this(0, nome, login, new List<Perfil> {new Perfil(perfil)})
         {
         }
 
@@ -27,6 +28,7 @@ namespace Ephesto.Domain.Entities
         public string Nome { get; private set; }
         public string Login { get; private set; }
         public List<Perfil> Perfis { get; private set; }
+
         public void Validar()
         {
             if (string.IsNullOrEmpty(Nome))

@@ -13,11 +13,12 @@ namespace Ephesto.Domain.Tests.Entities
             var cliente = new Usuario("Globo.com", "globo_esporte");
             Assert.AreEqual(cliente.Login, "globo_esporte");
         }
+
         [TestMethod]
         public void CriarUsuario()
         {
-            var cliente = new Usuario("Globo.com", "globo_esporte","Administrador");
-            Assert.AreEqual(cliente.Perfis.FirstOrDefault().Descricao,"Administrador");
+            var cliente = new Usuario("Globo.com", "globo_esporte", "Administrador");
+            Assert.AreEqual(cliente.Perfis.FirstOrDefault().Descricao, "Administrador");
         }
     }
 }

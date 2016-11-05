@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using Ephesto.Domain.Entities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -12,7 +10,7 @@ namespace Ephesto.Domain.Tests.Entities
         [TestMethod]
         public void CriarPerfil()
         {
-            Perfil perfil = new Perfil("Administrador");
+            var perfil = new Perfil("Administrador");
             Assert.AreEqual(perfil.Usuarios.FirstOrDefault(), null);
             Assert.AreEqual(perfil.Descricao, "Administrador");
         }

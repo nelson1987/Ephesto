@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using AutoMapper;
-using AutoMapper.Configuration;
 using Ephesto.Domain.Entities;
 using Ephesto.Web.ViewModels;
 
@@ -14,8 +10,9 @@ namespace Ephesto.Web.Mappers
         public static void RegisterMappings()
         {
             Mapper.Initialize(x => { x.AddProfile<MappingProfile>(); });
-        }  
+        }
     }
+
     public class MappingProfile : Profile
     {
         //private static readonly ILog Log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
@@ -36,7 +33,6 @@ namespace Ephesto.Web.Mappers
             {
                 //Log.Error(ex.Message);
             }
-            
         }
 
         protected void ViewToApiModel()

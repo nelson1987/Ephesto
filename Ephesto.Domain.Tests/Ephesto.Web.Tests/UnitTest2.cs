@@ -1,6 +1,4 @@
-﻿using System;
-using System.Web.Mvc;
-using Ephesto.Domain.Interfaces.Repositories;
+﻿using Ephesto.Domain.Interfaces.Repositories;
 using Ephesto.Web.Controllers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;

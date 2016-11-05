@@ -13,6 +13,7 @@ namespace Ephesto.Domain.Entities
             Usuarios = usuarios;
             Validar();
         }
+
         public Perfil(string descricao)
             : this(0, descricao, DateTime.Now, new List<Usuario>())
         {

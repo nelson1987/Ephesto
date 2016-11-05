@@ -3,7 +3,7 @@ using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Routing;
-using Ephesto.Web.Mappers;
+using Elmah;
 
 namespace Ephesto.Web
 {
@@ -15,7 +15,16 @@ namespace Ephesto.Web
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            //AutoMapperConfig.RegisterMappings();
+        }
+
+        protected void ErrorLog_Filtering(object sender, ExceptionFilterEventArgs e)
+        {
+            if (!(e.Exception.GetBaseException() is HttpException)) return;
+
+            var ex = (HttpException) e.Exception.GetBaseException();
+
+            if (ex.GetHttpCode() == 404)
+                e.Dismiss(); // ignora o erro
         }
     }
 }
