@@ -9,11 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ephesto.Domain", "Ephesto.D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0_Domain", "0_Domain", "{8AD9F509-07D1-4707-B7E1-5FE6D82322A1}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1_Service", "1_Service", "{72727C90-5268-4F77-9C8E-CB8B62DCA93E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1_Repository", "1_Repository", "{72727C90-5268-4F77-9C8E-CB8B62DCA93E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ephesto.Service", "Ephesto.Repository\Ephesto.Service.csproj", "{8EFF66DD-0ECF-4C84-91C0-CD64641F7E6D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ephesto.Repository", "Ephesto.Repository\Ephesto.Repository.csproj", "{8EFF66DD-0ECF-4C84-91C0-CD64641F7E6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ephesto.Service.Tests", "Ephesto.Repository.Tests\Ephesto.Service.Tests.csproj", "{07D815F1-4D3B-433A-A966-3A3C798FCFB7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ephesto.Repository.Tests", "Ephesto.Repository.Tests\Ephesto.Repository.Tests.csproj", "{07D815F1-4D3B-433A-A966-3A3C798FCFB7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

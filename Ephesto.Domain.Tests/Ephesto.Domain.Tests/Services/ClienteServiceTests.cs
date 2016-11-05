@@ -1,12 +1,11 @@
 ﻿using System;
-using Ephesto.Domain;
 using Ephesto.Domain.Entities;
-using Ephesto.Service.Interfaces;
-using Ephesto.Service.Services;
+using Ephesto.Domain.Interfaces.Repositories;
+using Ephesto.Domain.Services;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 
-namespace Ephesto.Service.Tests.Services
+namespace Ephesto.Domain.Tests.Services
 {
     [TestClass]
     public class ClienteServiceTests
@@ -20,16 +19,16 @@ namespace Ephesto.Service.Tests.Services
             //Arrange
             _mock = new Mock<IClienteRepository>();
             _target = new ClienteService(_mock.Object);
-            
+
             //Act
-            Cliente cliente = new Cliente("General Motors","general_motors");
+            Cliente cliente = new Cliente("General Motors", "general_motors");
             _mock.Setup(x => x.BuscarPorId(It.IsAny<int>()))
                 .Returns(cliente);
 
             //Assert
             Cliente esperado = _target.CriarCliente(cliente);
             Cliente atual = new Cliente(1, "General Motors", "general_motors");
-            Assert.AreEqual(esperado.Login,atual.Login);
+            Assert.AreEqual(esperado.Login, atual.Login);
         }
     }
 }
